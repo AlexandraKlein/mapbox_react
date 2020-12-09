@@ -8,7 +8,7 @@ import ReactMapGL, {
 } from "react-map-gl";
 import bbox from "@turf/bbox";
 import styled from "@emotion/styled";
-import geojson from "./geojson.json";
+import geojson from "./counties.geojson";
 require("dotenv").config();
 
 const StyledMap = styled.div`
