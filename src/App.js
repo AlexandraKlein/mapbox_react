@@ -2,24 +2,23 @@ import React, { Component } from "react";
 import ReactMapGL, { Source, Layer } from "react-map-gl";
 import styled from "@emotion/styled";
 import geojson from "./geojson.json";
-
 require("dotenv").config();
 
 const StyledMap = styled.div`
-  .mapgl-mapbox {
-    min-height: 70vh;
-    min-width: 100vw;
+  position: relative;
+  min-height: 70vh;
+  min-width: 100vw;
+  > div {
+    position: absolute !important;
   }
 `;
 
 class App extends Component {
   state = {
     viewport: {
-      width: 1200,
-      height: 1000,
-      latitude: 37.7577,
-      longitude: -122.4376,
-      zoom: 8,
+      latitude: 38.19302809153077,
+      longitude: -96.87815987018907,
+      zoom: 3.7,
     },
   };
 
@@ -38,19 +37,25 @@ class App extends Component {
 
   onMapLoaded = (map) => {
     this.map = map;
-    console.log({ map });
+  };
+
+  onViewportChange = (viewport) => {
+    this.setState({ viewport });
   };
 
   render() {
+    const { viewport } = this.state;
     return (
       <div className="App">
         <StyledMap>
           <ReactMapGL
-            {...this.state.viewport}
+            {...viewport}
+            width="100%"
+            height="100%"
             data={geojson}
             mapStyle="mapbox://styles/mbxsolutions/ck4ye87f3nlti1co2al1wpsnz"
             mapboxApiAccessToken={process.env.REACT_APP_MapboxAccessToken}
-            onViewportChange={(viewport) => this.setState({ viewport })}
+            onViewportChange={(viewport) => this.onViewportChange(viewport)}
             onClick={this.onMapClick}
             onLoad={this.onMapLoaded}
             className="mapgl-mapbox"
