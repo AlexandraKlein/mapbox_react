@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import ReactMapGL, {
   Source,
   Layer,
@@ -13,20 +13,42 @@ import styled from "@emotion/styled";
 import resetIcon from "../../assets/reset-map.svg";
 require("dotenv").config();
 
-const featuredValue = "unemployment_rate";
+const featuredValue = "STATE";
+
+const COLORS = {
+  OPEN: "#ADF1D2",
+  SHUTDOWN: "#FF5A5F",
+  PARTIALLY_OPEN: "#50858B",
+};
 
 const countyFillPaint = {
   "fill-opacity": 0.5,
   "fill-color": [
-    "interpolate",
-    ["linear"],
+    "match",
     ["get", featuredValue],
-    3,
-    "#A25626",
-    5,
-    "#8B4225",
-    7,
-    "#723122",
+    "CA",
+    COLORS.SHUTDOWN,
+    "OR",
+    COLORS.PARTIALLY_OPEN,
+    "NV",
+    COLORS.OPEN,
+    "ID",
+    COLORS.OPEN,
+    "WA",
+    COLORS.OPEN,
+    "MT",
+    COLORS.PARTIALLY_OPEN,
+    "WY",
+    COLORS.PARTIALLY_OPEN,
+    "UT",
+    COLORS.OPEN,
+    "C0",
+    COLORS.PARTIALLY_OPEN,
+    "AZ",
+    COLORS.PARTIALLY_OPEN,
+    "NM",
+    COLORS.PARTIALLY_OPEN,
+    "transparent",
   ],
 };
 
@@ -143,17 +165,22 @@ class Map extends Component {
     console.log({ viewport });
   };
 
-  render() {
+  renderMapContent() {
     const { geojson, error, isLoading, viewport, popupContent } = this.state;
     if (error) {
       return <p>{error.message}</p>;
     }
 
     if (isLoading) {
-      return <p>Loading ...</p>;
+      return (
+        <LoadingContainer>
+          <p>Loading ...</p>
+        </LoadingContainer>
+      );
     }
+
     return (
-      <StyledMap>
+      <Fragment>
         <ReactMapGL
           {...viewport}
           width="100%"
@@ -192,14 +219,18 @@ class Map extends Component {
             )}
           </Source>
           {/* <StyledNavigation>
-            <NavigationControl />
-          </StyledNavigation> */}
+              <NavigationControl />
+            </StyledNavigation> */}
         </ReactMapGL>
         <ResetButton className="font-monospace" onClick={this.handleResetZoom}>
           <img src={resetIcon} alt="Reset Map" />
         </ResetButton>
-      </StyledMap>
+      </Fragment>
     );
+  }
+
+  render() {
+    return <StyledMap>{this.renderMapContent()}</StyledMap>;
   }
 }
 
@@ -208,6 +239,7 @@ export default Map;
 const popupColor = "#242424";
 
 const StyledMap = styled.div`
+  background-color: black;
   position: relative;
   min-height: 70vh;
   min-width: 100vw;
@@ -253,3 +285,14 @@ const ResetButton = styled.button`
 //   right: 20px;
 //   top: 20px;
 // `;
+
+const LoadingContainer = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+`;
