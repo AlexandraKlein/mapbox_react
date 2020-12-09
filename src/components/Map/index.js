@@ -10,6 +10,7 @@ import ReactMapGL, {
 import "mapbox-gl/dist/mapbox-gl.css";
 import bbox from "@turf/bbox";
 import styled from "@emotion/styled";
+import resetIcon from "../../assets/reset-map.svg";
 require("dotenv").config();
 
 const featuredValue = "unemployment_rate";
@@ -195,7 +196,7 @@ class Map extends Component {
           </StyledNavigation> */}
         </ReactMapGL>
         <ResetButton className="font-monospace" onClick={this.handleResetZoom}>
-          RESET
+          <img src={resetIcon} alt="Reset Map" />
         </ResetButton>
       </StyledMap>
     );
@@ -243,6 +244,8 @@ const ResetButton = styled.button`
   right: 20px;
   z-index: 1;
   color: white;
+  width: 30px;
+  height: 30px;
 `;
 
 // const StyledNavigation = styled.div`
