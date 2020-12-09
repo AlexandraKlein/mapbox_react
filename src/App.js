@@ -1,5 +1,12 @@
 import React, { Component } from "react";
-import ReactMapGL, { Source, Layer } from "react-map-gl";
+import ReactMapGL, {
+  Source,
+  Layer,
+  Popup,
+  LinearInterpolator,
+  WebMercatorViewport,
+} from "react-map-gl";
+import bbox from "@turf/bbox";
 import styled from "@emotion/styled";
 import geojson from "./geojson.json";
 require("dotenv").config();
@@ -13,26 +20,110 @@ const StyledMap = styled.div`
   }
 `;
 
+const StyledPopup = styled.div`
+  .mapboxgl-popup-content {
+    background-color: #214962;
+    color: white;
+  }
+  .mapboxgl-popup-tip {
+    border-bottom-color: #214962 !important;
+  }
+
+  .mapboxgl-popup-close-button {
+    color: white;
+  }
+`;
+
+const countyPaint = {
+  "fill-opacity": 0.5,
+  "fill-color": [
+    "interpolate",
+    ["linear"],
+    ["get", "unemployment_rate"],
+    0,
+    "#F2F12D",
+    1,
+    "#EED322",
+    2,
+    "#E6B71E",
+    3,
+    "#DA9C20",
+    4,
+    "#CA8323",
+    5,
+    "#B86B25",
+    6,
+    "#A25626",
+    7,
+    "#8B4225",
+    8,
+    "#723122",
+  ],
+};
+
 class App extends Component {
   state = {
+    popupContent: null,
     viewport: {
       latitude: 38.19302809153077,
       longitude: -96.87815987018907,
       zoom: 3.7,
+      minZoom: 3.7,
     },
   };
 
-  onMapClick = (event) => {
-    const {
-      features,
-      srcEvent: { offsetX, offsetY },
-    } = event;
+  handlePopupContent = (event, feature) => {
+    if (feature && feature.properties) {
+      this.setState({
+        popupContent: {
+          latitude: event.lngLat[1],
+          longitude: event.lngLat[0],
+          title: feature.properties.NAME,
+          description: feature.properties.unemployment_rate,
+        },
+      });
+    } else {
+      this.setState({
+        popupContent: null,
+      });
+    }
+  };
 
+  handleZoomToCounty = (event, feature) => {
+    const [minLng, minLat, maxLng, maxLat] = bbox(feature);
+    const viewport = new WebMercatorViewport(this.state.viewport);
+    const { longitude, latitude, zoom } = viewport.fitBounds(
+      [
+        [minLng, minLat],
+        [maxLng, maxLat],
+      ],
+      {
+        padding: 100,
+      }
+    );
+
+    this.setState({
+      viewport: {
+        ...this.state.viewport,
+        longitude,
+        latitude,
+        zoom,
+        transitionInterpolator: new LinearInterpolator({
+          around: [event.offsetCenter.x, event.offsetCenter.y],
+        }),
+        transitionDuration: 750,
+      },
+    });
+  };
+
+  onMapClick = (event) => {
+    const { features } = event;
     const feature = features.find(
       (feature) => feature.layer.id === "fill-layer"
     );
 
-    console.log(feature);
+    this.handleZoomToCounty(event, feature);
+    this.handlePopupContent(event, feature);
   };
 
   onMapLoaded = (map) => {
@@ -44,7 +135,7 @@ class App extends Component {
   };
 
   render() {
-    const { viewport } = this.state;
+    const { viewport, popupContent } = this.state;
     return (
       <div className="App">
         <StyledMap>
@@ -61,36 +152,25 @@ class App extends Component {
             className="mapgl-mapbox"
           >
             <Source id="my-data" type="geojson" data={geojson}>
-              <Layer
-                id="fill-layer"
-                type="fill"
-                paint={{
-                  "fill-opacity": 0.5,
-                  "fill-color": [
-                    "interpolate",
-                    ["linear"],
-                    ["get", "unemployment_rate"],
-                    0,
-                    "#F2F12D",
-                    1,
-                    "#EED322",
-                    2,
-                    "#E6B71E",
-                    3,
-                    "#DA9C20",
-                    4,
-                    "#CA8323",
-                    5,
-                    "#B86B25",
-                    6,
-                    "#A25626",
-                    7,
-                    "#8B4225",
-                    8,
-                    "#723122",
-                  ],
-                }}
-              />
+              <Layer id="fill-layer" type="fill" paint={countyPaint} />
+
+              {popupContent && popupContent.latitude && popupContent.longitude && (
+                <StyledPopup>
+                  <Popup
+                    latitude={popupContent.latitude}
+                    longitude={popupContent.longitude}
+                    closeButton={true}
+                    closeOnClick={false}
+                    onClose={() => this.setState({ popupContent: null })}
+                    anchor="top"
+                  >
+                    <div>
+                      <h3>{popupContent.title}</h3>
+                      <p>Unemployment Rate: {popupContent.description}</p>
+                    </div>
+                  </Popup>
+                </StyledPopup>
+              )}
             </Source>
           </ReactMapGL>
         </StyledMap>
