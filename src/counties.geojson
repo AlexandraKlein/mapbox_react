@@ -27,7 +27,9 @@
         ]
       },
       "type": "Feature",
+      "id": 1,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "San Francisco",
         "ALAND": 121485107,
         "unemployment_rate": 2.9,
@@ -81,7 +83,9 @@
         ]
       },
       "type": "Feature",
+      "id": 2,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Suffolk",
         "ALAND": 150855462,
         "unemployment_rate": 3.4,
@@ -27391,7 +27395,9 @@
         ]
       },
       "type": "Feature",
+      "id": 3,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Santa Cruz",
         "ALAND": 1152967426,
         "unemployment_rate": 5.7,
@@ -27708,7 +27714,9 @@
         ]
       },
       "type": "Feature",
+      "id": 4,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Kings",
         "ALAND": 3598593366,
         "unemployment_rate": 8.9,
@@ -35317,7 +35325,9 @@
         ]
       },
       "type": "Feature",
+      "id": 4,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Santa Clara",
         "ALAND": 3344209919,
         "unemployment_rate": 3.2,
@@ -35952,7 +35962,9 @@
         ]
       },
       "type": "Feature",
+      "id": 6,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Glenn",
         "ALAND": 3403149421,
         "unemployment_rate": 7.5,
@@ -42375,7 +42387,9 @@
         ]
       },
       "type": "Feature",
+      "id": 7,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Tulare",
         "ALAND": 12494838453,
         "unemployment_rate": 10.4,
@@ -43997,7 +44011,9 @@
         ]
       },
       "type": "Feature",
+      "id": 8,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Los Angeles",
         "ALAND": 10510588451,
         "unemployment_rate": 4.7,
@@ -44054,7 +44070,9 @@
         ]
       },
       "type": "Feature",
+      "id": 9,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Sonoma",
         "ALAND": 4081450561,
         "unemployment_rate": 3.4,
@@ -44131,7 +44149,9 @@
         ]
       },
       "type": "Feature",
+      "id": 10,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Riverside",
         "ALAND": 18664542308,
         "unemployment_rate": 5.2,
@@ -48034,7 +48054,9 @@
         ]
       },
       "type": "Feature",
+      "id": 11,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Marin",
         "ALAND": 1347976832,
         "unemployment_rate": 2.9,
@@ -48395,7 +48417,9 @@
         ]
       },
       "type": "Feature",
+      "id": 12,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "San Diego",
         "ALAND": 10898787530,
         "unemployment_rate": 4.0,
@@ -48926,7 +48950,9 @@
         ]
       },
       "type": "Feature",
+      "id": 13,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Kern",
         "ALAND": 21062393794,
         "unemployment_rate": 9.2,
@@ -51156,7 +51182,9 @@
         ]
       },
       "type": "Feature",
+      "id": 14,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Mariposa",
         "ALAND": 3752472156,
         "unemployment_rate": 5.9,
@@ -51615,7 +51643,9 @@
         ]
       },
       "type": "Feature",
+      "id": 15,
       "properties": {
+        "STATUS": "Open",
         "NAME": "San Mateo",
         "ALAND": 1161757245,
         "unemployment_rate": 2.7,
@@ -55497,7 +55527,9 @@
         ]
       },
       "type": "Feature",
+      "id": 16,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Ventura",
         "ALAND": 4773302741,
         "unemployment_rate": 4.5,
@@ -55561,7 +55593,9 @@
         ]
       },
       "type": "Feature",
+      "id": 17,
       "properties": {
+        "STATUS": "Open",
         "NAME": "Imperial",
         "ALAND": 10817291631,
         "unemployment_rate": 19.1,
@@ -55618,7 +55652,9 @@
         ]
       },
       "type": "Feature",
+      "id": 18,
       "properties": {
+        "STATUS": "Open",
         "NAME": "El Dorado",
         "ALAND": 4423290535,
         "unemployment_rate": 4.4,
@@ -57111,7 +57147,9 @@
         ]
       },
       "type": "Feature",
+      "id": 19,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Orange",
         "ALAND": 2048392529,
         "unemployment_rate": 3.5,
@@ -62609,7 +62647,9 @@
         ]
       },
       "type": "Feature",
+      "id": 20,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Monterey",
         "ALAND": 8496680819,
         "unemployment_rate": 7.2,
@@ -64603,7 +64643,9 @@
         ]
       },
       "type": "Feature",
+      "id": 21,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Contra Costa",
         "ALAND": 1857310903,
         "unemployment_rate": 3.8,
@@ -65358,7 +65400,9 @@
         ]
       },
       "type": "Feature",
+      "id": 22,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Stanislaus",
         "ALAND": 3874634688,
         "unemployment_rate": 7.5,
@@ -70671,7 +70715,9 @@
         ]
       },
       "type": "Feature",
+      "id": 23,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Humboldt",
         "ALAND": 9241251740,
         "unemployment_rate": 4.2,
@@ -84588,7 +84634,9 @@
         ]
       },
       "type": "Feature",
+      "id": 24,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Inyo",
         "ALAND": 26368508430,
         "unemployment_rate": 4.4,
@@ -84883,7 +84931,9 @@
         ]
       },
       "type": "Feature",
+      "id": 25,
       "properties": {
+        "STATUS": "Open",
         "NAME": "Siskiyou",
         "ALAND": 16261933292,
         "unemployment_rate": 7.2,
@@ -87265,7 +87315,9 @@
         ]
       },
       "type": "Feature",
+      "id": 26,
       "properties": {
+        "STATUS": "Open",
         "NAME": "Calaveras",
         "ALAND": 2641829199,
         "unemployment_rate": 4.7,
@@ -90200,7 +90252,9 @@
         ]
       },
       "type": "Feature",
+      "id": 27,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Yuba",
         "ALAND": 1636913850,
         "unemployment_rate": 7.4,
@@ -92559,7 +92613,9 @@
         ]
       },
       "type": "Feature",
+      "id": 28,
       "properties": {
+        "STATUS": "Open",
         "NAME": "Merced",
         "ALAND": 5012175320,
         "unemployment_rate": 9.3,
@@ -93549,7 +93605,9 @@
         ]
       },
       "type": "Feature",
+      "id": 29,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Lake",
         "ALAND": 3254348631,
         "unemployment_rate": 5.7,
@@ -94864,7 +94922,9 @@
         ]
       },
       "type": "Feature",
+      "id": 30,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Madera",
         "ALAND": 5534850492,
         "unemployment_rate": 8.1,
@@ -97086,7 +97146,9 @@
         ]
       },
       "type": "Feature",
+      "id": 31,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Modoc",
         "ALAND": 10140960164,
         "unemployment_rate": 8.0,
@@ -97353,7 +97415,9 @@
         ]
       },
       "type": "Feature",
+      "id": 32,
       "properties": {
+        "STATUS": "Open",
         "NAME": "Plumas",
         "ALAND": 6612400919,
         "unemployment_rate": 8.9,
@@ -98176,7 +98240,9 @@
         ]
       },
       "type": "Feature",
+      "id": 33,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Tehama",
         "ALAND": 7638228772,
         "unemployment_rate": 6.4,
@@ -98370,7 +98436,9 @@
         ]
       },
       "type": "Feature",
+      "id": 34,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Nevada",
         "ALAND": 2480587331,
         "unemployment_rate": 4.1,
@@ -98430,7 +98498,9 @@
         ]
       },
       "type": "Feature",
+      "id": 35,
       "properties": {
+        "STATUS": "Open",
         "NAME": "Yolo",
         "ALAND": 2628256658,
         "unemployment_rate": 5.0,
@@ -100102,7 +100172,9 @@
         ]
       },
       "type": "Feature",
+      "id": 36,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Mono",
         "ALAND": 7896838493,
         "unemployment_rate": 4.4,
@@ -100617,7 +100689,9 @@
         ]
       },
       "type": "Feature",
+      "id": 37,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Santa Barbara",
         "ALAND": 7084000622,
         "unemployment_rate": 4.5,
@@ -109187,7 +109261,9 @@
         ]
       },
       "type": "Feature",
+      "id": 38,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Shasta",
         "ALAND": 9778230094,
         "unemployment_rate": 5.8,
@@ -110701,7 +110777,9 @@
         ]
       },
       "type": "Feature",
+      "id": 39,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "San Benito",
         "ALAND": 3596588882,
         "unemployment_rate": 5.8,
@@ -111547,7 +111625,9 @@
         ]
       },
       "type": "Feature",
+      "id": 40,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Sacramento",
         "ALAND": 2499039655,
         "unemployment_rate": 4.6,
@@ -112239,7 +112319,9 @@
         ]
       },
       "type": "Feature",
+      "id": 41,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "San Bernardino",
         "ALAND": 51948123813,
         "unemployment_rate": 4.9,
@@ -113488,7 +113570,9 @@
         ]
       },
       "type": "Feature",
+      "id": 42,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Trinity",
         "ALAND": 8234265086,
         "unemployment_rate": 6.0,
@@ -117354,7 +117438,9 @@
         ]
       },
       "type": "Feature",
+      "id": 43,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Alpine",
         "ALAND": 1912292631,
         "unemployment_rate": 6.1,
@@ -118357,7 +118443,9 @@
         ]
       },
       "type": "Feature",
+      "id": 44,
       "properties": {
+        "STATUS": "Open",
         "NAME": "Tuolumne",
         "ALAND": 5752079368,
         "unemployment_rate": 5.4,
@@ -118480,7 +118568,9 @@
         ]
       },
       "type": "Feature",
+      "id": 45,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Mendocino",
         "ALAND": 9081426673,
         "unemployment_rate": 4.5,
@@ -119875,7 +119965,9 @@
         ]
       },
       "type": "Feature",
+      "id": 46,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Colusa",
         "ALAND": 2980332860,
         "unemployment_rate": 14.3,
@@ -120259,7 +120351,9 @@
         ]
       },
       "type": "Feature",
+      "id": 47,
       "properties": {
+        "STATUS": "Open",
         "NAME": "Del Norte",
         "ALAND": 2606117992,
         "unemployment_rate": 6.4,
@@ -120316,7 +120410,9 @@
         ]
       },
       "type": "Feature",
+      "id": 48,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Solano",
         "ALAND": 2128347201,
         "unemployment_rate": 4.8,
@@ -127367,7 +127463,9 @@
         ]
       },
       "type": "Feature",
+      "id": 49,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Lassen",
         "ALAND": 11761615611,
         "unemployment_rate": 5.6,
@@ -130579,7 +130677,9 @@
         ]
       },
       "type": "Feature",
+      "id": 50,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Placer",
         "ALAND": 3644244131,
         "unemployment_rate": 3.8,
@@ -134332,7 +134432,9 @@
         ]
       },
       "type": "Feature",
+      "id": 51,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Butte",
         "ALAND": 4238438196,
         "unemployment_rate": 5.7,
@@ -134981,7 +135083,9 @@
         ]
       },
       "type": "Feature",
+      "id": 52,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Fresno",
         "ALAND": 15431410219,
         "unemployment_rate": 8.5,
@@ -135105,7 +135209,9 @@
         ]
       },
       "type": "Feature",
+      "id": 53,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "San Joaquin",
         "ALAND": 3606190671,
         "unemployment_rate": 7.0,
@@ -135940,7 +136046,9 @@
         ]
       },
       "type": "Feature",
+      "id": 54,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "Amador",
         "ALAND": 1539933576,
         "unemployment_rate": 4.9,
@@ -137148,7 +137256,9 @@
         ]
       },
       "type": "Feature",
+      "id": 55,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Sierra",
         "ALAND": 2468694586,
         "unemployment_rate": 6.5,
@@ -139139,7 +139249,9 @@
         ]
       },
       "type": "Feature",
+      "id": 56,
       "properties": {
+        "STATUS": "Open",
         "NAME": "Sutter",
         "ALAND": 1560275634,
         "unemployment_rate": 8.6,
@@ -139422,7 +139534,9 @@
         ]
       },
       "type": "Feature",
+      "id": 57,
       "properties": {
+        "STATUS": "Closed",
         "NAME": "San Luis Obispo",
         "ALAND": 8548552397,
         "unemployment_rate": 3.6,
@@ -140646,7 +140760,9 @@
         ]
       },
       "type": "Feature",
+      "id": 58,
       "properties": {
+        "STATUS": "Partially Open",
         "NAME": "Napa",
         "ALAND": 1938165958,
         "unemployment_rate": 3.7,
@@ -141605,7 +141721,9 @@
         ]
       },
       "type": "Feature",
+      "id": 59,
       "properties": {
+        "STATUS": "Open",
         "NAME": "Alameda",
         "ALAND": 1909616630,
         "unemployment_rate": 3.6,
